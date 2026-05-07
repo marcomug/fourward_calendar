@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team.Notes - CMS Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #fcf9f2; }
+        .font-serif { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-2xl mx-auto bg-white border border-[#E6E4DD] p-8 shadow-sm">
+        <h1 class="text-3xl font-serif italic mb-6">Gestione Task (CMS)</h1>
+        
+        <form id="taskForm" class="space-y-4 mb-8">
+            <div>
+                <label class="block text-sm font-semibold uppercase tracking-wider text-stone-500 mb-1">Titolo Task</label>
+                <input type="text" id="taskTitle" required class="w-full border-[#E6E4DD] focus:ring-stone-500 focus:border-stone-500 rounded-none p-2 border">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold uppercase tracking-wider text-stone-500 mb-1">Assegna a</label>
+                <select id="taskMember" class="w-full border-[#E6E4DD] focus:ring-stone-500 focus:border-stone-500 rounded-none p-2 border">
+                    <option value="Alex">Alex (Blu)</option>
+                    <option value="Sarah">Sarah (Smeraldo)</option>
+                    <option value="David">David (Ambra)</option>
+                    <option value="Maria">Maria (Rosa)</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-stone-900 text-white py-3 uppercase tracking-widest text-sm hover:bg-stone-800 transition-colors">Aggiungi Task</button>
+        </form>
+
+        <h2 class="text-xl font-serif mb-4 border-b pb-2">Task Attive</h2>
+        <ul id="taskList" class="space-y-2"></ul>
+        
+        <div class="mt-8 pt-4 border-t text-sm text-stone-400">
+            <a href="obiettivi" class="underline">Torna alla App</a>
+        </div>
+    </div>
+
+    <script>
+        const taskForm = document.getElementById('taskForm');
+        const taskList = document.getElementById('taskList');
+
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem('team_tasks')) || [];
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.className = "flex justify-between items-center p-3 bg-stone-50 border border-[#E6E4DD]";
+                li.innerHTML = `
+                    <span><strong>${task.title}</strong> (${task.member})</span>
+                    <button onclick="deleteTask(${index})" class="text-red-500 text-xs uppercase font-bold">Elimina</button>
+                `;
+                taskList.appendChild(li);
+            });
+        }
+
+        taskForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const tasks = JSON.parse(localStorage.getItem('team_tasks')) || [];
+            tasks.push({
+                title: document.getElementById('taskTitle').value,
+                member: document.getElementById('taskMember').value,
+                status: 'active'
+            });
+            localStorage.setItem('team_tasks', JSON.stringify(tasks));
+            taskForm.reset();
+            loadTasks();
+        });
+
+        window.deleteTask = (index) => {
+            const tasks = JSON.parse(localStorage.getItem('team_tasks'));
+            tasks.splice(index, 1);
+            localStorage.setItem('team_tasks', JSON.stringify(tasks));
+            loadTasks();
+        };
+
+        loadTasks();
+    </script>
+</body>
+</html>
