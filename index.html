@@ -1,93 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Team.Notes - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { background: "#fcf9f2", primary: "#5e5f5c", tertiary: "#625d5e", surface: "#ffffff" },
+                    fontFamily: { 'body-md': ["Work Sans"], 'serif': ["Newsreader"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #fcf9f2; font-family: 'Work Sans', sans-serif; min-height: 100vh; }
+        .paper-card { background-color: #ffffff; border: 1px solid #E6E4DD; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"/&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Team.Notes - Dashboard&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0&amp;display=swap" rel="stylesheet"/&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tailwind.config = {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>theme: {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>extend: {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>colors: { background: "#fcf9f2", primary: "#5e5f5c", tertiary: "#625d5e", surface: "#ffffff" },</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>fontFamily: { 'body-md': ["Work Sans"], 'serif': ["Newsreader"] }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body { background-color: #fcf9f2; font-family: 'Work Sans', sans-serif; min-height: 100vh; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.paper-card { background-color: #ffffff; border: 1px solid #E6E4DD; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.hide-scrollbar::-webkit-scrollbar { display: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body class="text-stone-900 pb-24"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header class="flex justify-between items-center px-6 py-4 bg-[#F9F8F4] border-b border-[#E6E4DD]"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="flex items-center gap-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="material-symbols-outlined"&gt;menu&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1 class="font-serif italic text-xl font-semibold tracking-tight"&gt;Team.Notes&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-[720px] mx-auto px-6 pt-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section class="mb-12"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-serif mb-1"&gt;Weekly Overview&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-stone-500 mb-4"&gt;Oct 23 — Oct 29&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex overflow-x-auto gap-4 hide-scrollbar pb-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="paper-card min-w-[120px] p-4 flex flex-col items-center"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-stone-500 mb-1"&gt;MON&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-2xl font-serif"&gt;23&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="paper-card min-w-[120px] p-4 flex flex-col items-center border-stone-800 border-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-stone-900 font-bold mb-1"&gt;TUE&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-2xl font-serif"&gt;24&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="paper-card min-w-[120px] p-4 flex flex-col items-center"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-stone-500 mb-1"&gt;WED&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-2xl font-serif"&gt;25&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section class="mb-12"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-2xl font-serif mb-6"&gt;Weekly Progress&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="paper-card p-6 border-l-4 border-l-stone-600"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-semibold tracking-wide"&gt;EDITORIAL CALENDAR&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="font-bold"&gt;64%&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="w-full bg-stone-100 h-2 rounded-full"&gt;&lt;div class="bg-stone-600 h-full w-[64%]"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-[#F9F8F4] border-t border-[#E6E4DD] h-20"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="index" class="flex flex-col items-center text-stone-900"&gt;&lt;span class="material-symbols-outlined"&gt;dashboard&lt;/span&gt;&lt;span class="text-[10px] uppercase"&gt;Home&lt;/span&gt;&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="calendario" class="flex flex-col items-center text-stone-400"&gt;&lt;span class="material-symbols-outlined"&gt;calendar_month&lt;/span&gt;&lt;span class="text-[10px] uppercase"&gt;Calendar&lt;/span&gt;&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="obiettivi" class="flex flex-col items-center text-stone-400"&gt;&lt;span class="material-symbols-outlined"&gt;edit_note&lt;/span&gt;&lt;span class="text-[10px] uppercase"&gt;Goals&lt;/span&gt;&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="profilo" class="flex flex-col items-center text-stone-400"&gt;&lt;span class="material-symbols-outlined"&gt;person&lt;/span&gt;&lt;span class="text-[10px] uppercase"&gt;Profile&lt;/span&gt;&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<body class="text-stone-900 pb-24">
+    <header class="flex justify-between items-center px-6 py-4 bg-[#F9F8F4] border-b border-[#E6E4DD]">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined">menu</span>
+            <h1 class="font-serif italic text-xl font-semibold tracking-tight">Team.Notes</h1>
+        </div>
+    </header>
+
+    <main class="max-w-[720px] mx-auto px-6 pt-8">
+        <section class="mb-12">
+            <h2 class="text-3xl font-serif mb-1">Weekly Overview</h2>
+            <p class="text-stone-500 mb-4">Oct 23 — Oct 29</p>
+            <div class="flex overflow-x-auto gap-4 hide-scrollbar pb-4">
+                <div class="paper-card min-w-[120px] p-4 flex flex-col items-center">
+                    <span class="text-xs text-stone-500 mb-1">MON</span>
+                    <span class="text-2xl font-serif">23</span>
+                </div>
+                <div class="paper-card min-w-[120px] p-4 flex flex-col items-center border-stone-800 border-2">
+                    <span class="text-xs text-stone-900 font-bold mb-1">TUE</span>
+                    <span class="text-2xl font-serif">24</span>
+                </div>
+                <div class="paper-card min-w-[120px] p-4 flex flex-col items-center">
+                    <span class="text-xs text-stone-500 mb-1">WED</span>
+                    <span class="text-2xl font-serif">25</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h3 class="text-2xl font-serif mb-6">Weekly Progress</h3>
+            <div class="space-y-4">
+                <div class="paper-card p-6 border-l-4 border-l-stone-600">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm font-semibold tracking-wide">EDITORIAL CALENDAR</span>
+                        <span class="font-bold">64%</span>
+                    </div>
+                    <div class="w-full bg-stone-100 h-2 rounded-full"><div class="bg-stone-600 h-full w-[64%]"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 w-full flex justify-around items-center bg-[#F9F8F4] border-t border-[#E6E4DD] h-20">
+        <a href="index" class="flex flex-col items-center text-stone-900"><span class="material-symbols-outlined">dashboard</span><span class="text-[10px] uppercase">Home</span></a>
+        <a href="calendario" class="flex flex-col items-center text-stone-400"><span class="material-symbols-outlined">calendar_month</span><span class="text-[10px] uppercase">Calendar</span></a>
+        <a href="obiettivi" class="flex flex-col items-center text-stone-400"><span class="material-symbols-outlined">edit_note</span><span class="text-[10px] uppercase">Goals</span></a>
+        <a href="profilo" class="flex flex-col items-center text-stone-400"><span class="material-symbols-outlined">person</span><span class="text-[10px] uppercase">Profile</span></a>
+    </nav>
 </body>
 </html>
